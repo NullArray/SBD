@@ -17,4 +17,4 @@ The `Help` option shows this informational message. The `Set Outpath` option all
 
 ### Note
 
-SBD was released to be a complimentary script to my [RootHelper](https://github.com/NullArray/RootHelper) tool. But I have decided to release it as a stand-alone version as well
+SBD was written to be a complimentary script to my [RootHelper](https://github.com/NullArray/RootHelper) tool. But I have decided to release it as a stand-alone version as well
