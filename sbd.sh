@@ -124,11 +124,10 @@ function busybox(){
 			compile
 		else
 			warning "Can not build BusyBox from source"
-		fi	
+        fi
+			
 	fi
-	
-	
-	}
+    }
 
 function net_utils(){
 	logo
@@ -153,7 +152,8 @@ function net_utils(){
 		echo -e "Unzipping Ngrok..."
 		
 		unzip $dirname/ngrok.zip -d $dirname
-	fi	notification "\nDone"
+		notification "\nDone"
+    fi
 	}
 
 function deploy_all(){
@@ -182,35 +182,37 @@ function usage(){
 As a post exploitation tool, this script is designed 
 to give the user access to Linux utilities that may
 otherwise be unavailabe, depending on the security
-context from which you're working on a compromised
+context from which you're working on the compromised
 system.
 
 As such SBD Utilities may prove helpful in enumeration,
 persistence, exploitation, and privilege escalation in
-combination with other tools."
+combination with other tools.\n"
 
 	notification_b "Usage Overview"
 	echo -e "\
-The 'Help' option shows this informational message.
+1. The 'Help' option shows this informational message.
 
-The 'Set Outpath' option allows you to define a directory
+2. The 'Set Outpath' option allows you to define a directory
 to which the static binaries will be deployed.
 
-'Deploy All' downloads all static binaries available with
+3. 'Deploy All' downloads all static binaries available with
 this tool.
 
-'Deploy BusyBox' downloads a BusyBox binary with built-in
+4. 'Deploy BusyBox' downloads a BusyBox binary with built-in
 Linux Utilities.
 
-Choosing the 'Deploy Net Utilities' option will download
+5. Choosing the 'Deploy Net Utilities' option will download
 static binaries for Ncat, Socat, Nmap, and Ngrok which
 is a portforwarding/tunneling utility.  	
 
-'Clean up' removes all downloaded files and 'Quit'
-exits SBD.\n"
+6.'Clean up' removes all downloaded files and;
+
+7.'Quit' exits SBD.\n"
 
 	}
 
+logo
 
 PS3='Please enter your choice: '
 options=("Help" "Set Outpath" "Deploy All" "Deploy BusyBox" "Deploy Net Utilities" "Clean up" "Quit")
