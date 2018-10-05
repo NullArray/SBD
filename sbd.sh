@@ -153,7 +153,7 @@ function net_utils(){
 		echo -e "Unzipping Ngrok..."
 		
 		unzip $dirname/ngrok.zip -d $dirname
-		notification "\nDone"
+	fi	notification "\nDone"
 	}
 
 function deploy_all(){
