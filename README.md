@@ -1,5 +1,5 @@
 # SBD
-As a post exploitation tool, this script is designed to give the user access to Linux utilities that may otherwise be unavailabe on a compromised system.
+This script is designed to give the user access to Linux utilities that may otherwise be unavailabe on a compromised system.
 
 Besides including [BusyBox](https://busybox.net/about.html), SBD also provides functionality to download static binaries for net utilities namely; Ncat, Socat, Nmap, and Ngrok.
 
