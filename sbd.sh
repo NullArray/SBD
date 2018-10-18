@@ -107,7 +107,7 @@ function busybox(){
 		wget -O $dirname/BusyBox https://busybox.net/downloads/binaries/1.28.1-defconfig-multiarch/busybox-${MACHINE_TYPE} || clear && build=1
 	fi
 	
-	stat $dirname/BusyBox > /dev/null && chmod +x $dirname/BusyBox 
+	stat $dirname/BusyBox > /dev/null && chmod +x $dirname/BusyBox || build=1 
 	
 	if [[ $build == 1 ]]; then	
 		echo -e "$RED [!] $RESET Unrecognized machine or architecture type.\n"
