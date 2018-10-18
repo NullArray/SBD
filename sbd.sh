@@ -107,6 +107,10 @@ function busybox(){
 		wget -O $dirname/BusyBox https://busybox.net/downloads/binaries/1.28.1-defconfig-multiarch/busybox-${MACHINE_TYPE} || clear && build=1
 	fi
 	
+	# If there's an Architecture not supported on busybox.net, URI:busybox-${MACHINE_TYPE}
+	# will refer to a nonexistant resource, as such wget will not be able to download it
+	# We `stat $dirname/BusyBox` to see if a succesful download occurred, if not, we'll
+	# download source and attempt to build busybox locally.
 	stat $dirname/BusyBox > /dev/null && chmod +x $dirname/BusyBox || build=1 
 	
 	if [[ $build == 1 ]]; then	
@@ -245,7 +249,7 @@ do
 	    ;;
         "Deploy BusyBox")
             checker
-	    busybox
+	     busybox
             printf "%b \n"
             ;;
         "Deploy Net Utilities")
