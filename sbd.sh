@@ -224,28 +224,28 @@ do
             printf "%b \n"
             ;;
         "Set Outpath")
-			echo -e "$CYAN [i] $RESET Current outpath is set to $dirname\n"
-			read -p 'Change output directory? [Y/n] ' choice
-			
-			if [[ $choice == 'y' || $choice == 'Y' ]]; then
-				read -p '\n Enter new outpath: ' dirname
-				# Check if valid
-				stat $dirname > /dev/null || notification_b "Invalid Path. Creating $dirname instead"
-				# Create directory or fall back to default in case we can't
-				mkdir $dirname || warning "Could not create directory. Defaulting to /tmp/" && dirname="/tmp"
-			else
-				echo -e "$CYAN [i] $RESET Outpath was not changed"
-			fi
+	    echo -e "$CYAN [i] $RESET Current outpath is set to $dirname\n"
+	    read -p 'Change output directory? [Y/n] ' choice
+		
+	    if [[ $choice == 'y' || $choice == 'Y' ]]; then
+		read -p '\n Enter new outpath: ' dirname
+		# Check if valid
+		stat $dirname > /dev/null || notification_b "Invalid Path. Creating $dirname instead"
+		# Create directory or fall back to default in case we can't
+		mkdir $dirname || warning "Could not create directory. Defaulting to /tmp/" && dirname="/tmp"
+      	    else
+		echo -e "$CYAN [i] $RESET Outpath was not changed"
+	    fi
 				
-			printf "%b \n"
+	    printf "%b \n"
             ;;
         "Deploy All")
-			deploy_all
-			printf "%b \n"
-			;;
+	    deploy_all
+	    printf "%b \n"
+	    ;;
         "Deploy BusyBox")
             checker
-			busybox
+	    busybox
             printf "%b \n"
             ;;
         "Deploy Net Utilities")
