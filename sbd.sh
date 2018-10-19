@@ -72,7 +72,7 @@ function checker(){
 	
 	# Check for make
 	MAKE=`which make`
-	if [[ ${MAKE} == "/usr/bin/make" || ${COMPILER} == "/bin/make" ]]; then
+	if [[ ${MAKE} == "/usr/bin/make" || ${MAKE} == "/bin/make" ]]; then
 		echo -e "$GREEN [+] $RESET make found."
 		make_present=1
 	else
