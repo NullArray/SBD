@@ -118,7 +118,7 @@ function busybox(){
 	
 		if [[ $gcc_present == 1 && $make_present == 1 ]]; then
 			echo -e "$GREEN [+] $RESET Since 'make' and 'gcc' are available SBD will attempt"
-			echo -e "$GREEN [+] $RESET to deploy BusyBox by building it from source intstead.\n"
+			echo -e "$GREEN [+] $RESET to deploy BusyBox by building it from source instead.\n"
 			wget -O $dirname/BusyBox.tar.bz2 https://busybox.net/downloads/busybox-1.29.3.tar.bz2
 			tar -xf $dirname/BusyBox.tar.bz2
 			
