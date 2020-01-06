@@ -249,7 +249,7 @@ do
 	    ;;
         "Deploy BusyBox")
             checker
-	     busybox
+	    busybox
             printf "%b \n"
             ;;
         "Deploy Net Utilities")
